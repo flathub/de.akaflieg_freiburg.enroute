@@ -13,7 +13,6 @@
         "--device=dri"
     ],
     "cleanup": [
-	"/bin/*.a",
 	"/bin/a*",
 	"/bin/d*",
 	"/bin/l*",
@@ -24,6 +23,9 @@
 	"/bin/r*",
 	"/bin/s*",
 	"/bin/u*",
+	"/lib/*.a",
+	"/lib/*.la",
+	"/lib/*.prl",
 	"/doc",
 	"/include",
 	"/mkspecs",
