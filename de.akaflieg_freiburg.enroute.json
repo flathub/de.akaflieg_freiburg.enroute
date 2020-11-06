@@ -88,7 +88,7 @@
                 {
 		    "type": "git",
                     "url": "git://code.qt.io/qt/qtbase.git",
-                    "tag": "5.15.0"
+                    "tag": "5.15.1"
                 },
                 {
                     "type": "shell",
@@ -112,11 +112,7 @@
                 {
                     "type": "git",
                     "url": "git://code.qt.io/qt/qtdeclarative.git",
-                    "tag": "5.15.0"
-                },
-		{
-                    "type": "patch",
-                    "path": "patch/qtdeclarative-use-python3.patch"
+                    "tag": "5.15.1"
                 }
 
             ]
@@ -134,7 +130,7 @@
                 {
 		    "type": "git",
                     "url": "git://code.qt.io/qt/qttools.git",
-                    "tag": "5.15.0"
+                    "tag": "5.15.1"
                 }
             ]
         },
@@ -146,7 +142,7 @@
                 {
 		    "type": "git",
                     "url": "git://code.qt.io/qt/qtlocation.git",
-                    "tag": "5.15.0"
+                    "tag": "5.15.1"
                 }
             ]
         },
@@ -158,7 +154,7 @@
                 {
 		    "type": "git",
                     "url": "git://code.qt.io/qt/qtquickcontrols2.git",
-                    "tag": "5.15.0"
+                    "tag": "5.15.1"
                 }
             ]
         },
@@ -170,7 +166,7 @@
                 {
 		    "type": "git",
                     "url": "git://code.qt.io/qt/qtsvg.git",
-                    "tag": "5.15.0"
+                    "tag": "5.15.1"
                 }
             ]
         },
@@ -182,7 +178,7 @@
                 {
 		    "type": "git",
                     "url": "git://code.qt.io/qt/qttranslations.git",
-                    "tag": "5.15.0"
+                    "tag": "5.15.1"
                 }
             ]
         },   
@@ -194,7 +190,7 @@
                 {
 		    "type": "git",
                     "url": "git://code.qt.io/qt/qtwayland.git",
-                    "tag": "5.15.0"
+                    "tag": "5.15.1"
                 }
             ]
         },
@@ -206,7 +202,7 @@
                 {
                     "type": "git",
                     "url": "git://code.qt.io/qt/qtx11extras.git",
-                    "tag": "5.15.0"
+                    "tag": "5.15.1"
                 }
             ]
         },
@@ -218,7 +214,7 @@
                 {
 		    "type": "git",
                     "url": "https://github.com/Akaflieg-Freiburg/enroute.git",
-		    "commit": "63e8b78"
+		    "commit": "b6a91664bd5e524a7080dec7c4917513fdb55490"
                 }
             ]
         }
