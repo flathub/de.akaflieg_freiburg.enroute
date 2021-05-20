@@ -10,6 +10,7 @@
         "--socket=x11",
         "--socket=wayland",
         "--system-talk-name=org.freedesktop.GeoClue2",
+        "--talk-name=org.freedesktop.Notification",
         "--device=dri"
     ],
     "modules": [
@@ -21,7 +22,7 @@
                 {
 		    "type": "git",
                     "url": "https://github.com/Akaflieg-Freiburg/enroute.git",
-		    "commit": "63a823b409bb6b0ebe93e4b127afddf6b1eaf956"
+		    "commit": "608ca2f0cee13079bd04183d3c995bcd3a418809"
                 }
             ]
         }
