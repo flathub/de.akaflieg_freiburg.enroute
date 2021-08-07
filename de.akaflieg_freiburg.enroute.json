@@ -13,15 +13,31 @@
         "--talk-name=org.freedesktop.Notifications"
     ],
     "modules": [
+	{
+            "name": "qt5-qtwebview",
+            "buildsystem": "qmake",
+            "cleanup-platform": [ "/bin" ],
+	    "make-install-args": [ "INSTALL_ROOT=/app" ],
+            "sources": [
+		{
+		    "type": "git",
+		    "url": "https://invent.kde.org/qt/qt/qtwebview.git",
+		    "commit": "920de5f"
+		}
+	    ]
+        },
         {
             "name": "enroute",
             "buildsystem": "cmake-ninja",
-            "config-opts": ["-DCMAKE_BUILD_TYPE=RelWithDebInfo"],
+            "config-opts": [
+		"-DCMAKE_BUILD_TYPE=RelWithDebInfo",
+		"-DQt5WebView_DIR=/app/usr/lib/x86_64-linux-gnu/cmake/Qt5WebView"
+	    ],
             "sources": [
                 {
 		    "type": "git",
                     "url": "https://github.com/Akaflieg-Freiburg/enroute.git",
-		    "commit": "53fa11c63a49312838815fa2125a7ec418299e9d"
+		    "commit": "539698af722247d83279f7ac9d0942d0fa698d04"
                 }
             ]
         }
