@@ -2,9 +2,9 @@
     "app-id": "de.akaflieg_freiburg.enroute",
     "runtime": "org.kde.Platform",
     "runtime-version": "5.15",
-    "base": "io.qt.qtwebengine.BaseApp",
     "base-version": "5.15",
     "sdk": "org.kde.Sdk",
+    "writable-sdk": true,
     "command": "enroute",
     "finish-args": [
         "--share=ipc",
@@ -20,14 +20,6 @@
             "buildsystem": "qmake",
             "cleanup-platform": [
                 "/bin"
-            ],
-            "make-install-args": [
-                "INSTALL_ROOT=/app/scratchdir"
-            ],
-            "post-install": [
-                "cp -r /app/scratchdir/usr/* /app",
-                "rm -rf /app/scratchdir",
-                "ln -s /app/lib/*/*.so* /app/lib"
             ],
             "sources": [
                 {
