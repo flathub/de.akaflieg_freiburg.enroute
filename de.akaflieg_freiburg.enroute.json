@@ -4,7 +4,6 @@
     "runtime-version": "5.15",
     "base-version": "5.15",
     "sdk": "org.kde.Sdk",
-    "writable-sdk": true,
     "command": "enroute",
     "finish-args": [
         "--share=ipc",
@@ -18,15 +17,20 @@
         {
             "name": "qt5-qtwebview",
             "buildsystem": "qmake",
-            "cleanup-platform": [
-                "/bin"
-            ],
             "sources": [
                 {
                     "type": "git",
                     "url": "https://invent.kde.org/qt/qt/qtwebview.git",
                     "commit": "920de5f"
                 }
+            ],
+            "make-install-args": [
+                "INSTALL_ROOT=/app/scratchdir"
+            ],
+            "post-install": [
+                "cp -r /app/scratchdir/usr/* /app",
+                "rm -rf /app/scratchdir",
+                "ln -s /app/lib/*/*.so* /app/lib"
             ]
         },
         {
@@ -34,13 +38,13 @@
             "buildsystem": "cmake-ninja",
             "config-opts": [
                 "-DCMAKE_BUILD_TYPE=RelWithDebInfo",
-                "-DQt5WebView_DIR=/app/usr/lib/x86_64-linux-gnu/cmake/Qt5WebView"
+                "-DQt5WebView_DIR=/app/lib/x86_64-linux-gnu/cmake/Qt5WebView"
             ],
             "sources": [
                 {
                     "type": "git",
                     "url": "https://github.com/Akaflieg-Freiburg/enroute.git",
-                    "commit": "ab1a548f76c44bf773c6957c45e7e29c63e0ed44"
+                    "commit": "ab1a548"
                 }
             ],
             "post-install": [
@@ -48,5 +52,7 @@
                 "cp /app/share/icons/hicolor/scalable/apps/de.akaflieg_freiburg.enroute.svg /app/usr/share/icons/de.akaflieg_freiburg.enroute.svg"
             ]
         }
+
+        
     ]
 }
