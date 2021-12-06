@@ -4,6 +4,7 @@
     "runtime-version": "5.15-21.08",
     "sdk": "org.kde.Sdk",
     "command": "enroute",
+    "rename-icon": "enroute",
     "finish-args": [
         "--share=ipc",
         "--share=network",
