@@ -9,7 +9,10 @@
         "--share=ipc",
         "--share=network",
         "--socket=x11",
+        "--socket=fallback-x11",
         "--socket=wayland",
+        "--device=dri",
+        "--device=shm",
         "--system-talk-name=org.freedesktop.GeoClue2",
         "--talk-name=org.freedesktop.Notifications"
     ],
