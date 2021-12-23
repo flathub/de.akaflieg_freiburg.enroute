@@ -1,12 +1,8 @@
 {
     "app-id": "de.akaflieg_freiburg.enroute",
     "runtime": "org.kde.Platform",
-    "runtime-version": "5.15",
-    "base-version": "5.15",
+    "runtime-version": "5.15-21.08",
     "sdk": "org.kde.Sdk",
-    "sdk-extensions": [
-        "org.freedesktop.Sdk.Extension.node14"
-    ],
     "command": "enroute",
     "finish-args": [
         "--share=ipc",
@@ -18,191 +14,22 @@
     ],
     "modules": [
         {
-            "name": "qt5-qtwebengine",
-            "buildsystem": "qmake",
-            "build-options" : {
-                "append-path": "/usr/lib/sdk/node14/bin",
-                "env": [
-                  "npm_config_nodedir=/usr/lib/sdk/node14"
-                ]
-            },
-            "cleanup": [
-                "/bin"
-            ],
-            "make-install-args": [
-                "INSTALL_ROOT=/app/scratchdir"
-            ],
-            "config-opts": [
-                "--",
-                "-system-ffmpeg",
-                "-webengine-icu",
-                "-webengine-proprietary-codecs",
-                "-webengine-webrtc-pipewire",
-                "-webp"
-            ],
-            "post-install": [
-                "cp -r /app/scratchdir/usr/* /app",
-                "rm -rf /app/scratchdir",
-                "ln -s /app/lib/*/*.so* /app/lib"
-            ],
-            "modules": [
-                {
-                    "name": "python2",
-                    "cleanup": [
-                        "*"
-                    ],
-                    "sources": [
-                        {
-                            "type": "archive",
-                            "url": "https://www.python.org/ftp/python/2.7.18/Python-2.7.18.tar.xz",
-                            "sha256": "b62c0e7937551d0cc02b8fd5cb0f544f9405bafc9a54d3808ed4594812edef43",
-                            "x-checker-data": {
-                                "type": "anitya",
-                                "project-id": 13255,
-                                "stable-only": true,
-                                "url-template": "https://www.python.org/ftp/python/$version/Python-$version.tar.xz"
-                            }
-                        }
-                    ]
-                },
-                {
-                    "name": "pciutils",
-                    "no-autogen": true,
-                    "make-args": [
-                        "SHARED=no",
-                        "ZLIB=no",
-                        "PREFIX=/app"
-                    ],
-                    "post-install": [
-                        "make install-pcilib",
-                        "make install-lib"
-                    ],
-                    "sources": [
-                        {
-                            "type": "archive",
-                            "url": "https://mj.ucw.cz/download/linux/pci/pciutils-3.7.0.tar.gz",
-                            "sha256": "08c27e01030d1fcc700d02bc2ea66c638f58a3d150e45e58852aa82ad4160d84",
-                            "x-checker-data": {
-                                "type": "anitya",
-                                "project-id": 2605,
-                                "stable-only": true,
-                                "url-template": "https://mj.ucw.cz/download/linux/pci/pciutils-$version.tar.gz"
-                            }
-                        },
-                        {
-                            "type": "shell",
-                            "commands": [
-                                "sed -i 's@PREFIX=/usr/local@PREFIX=/app@' Makefile"
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "name": "pipewire-0.2",
-                    "buildsystem": "meson",
-                    "config-opts": [
-                        "-D docs=false",
-                        "-D gstreamer=disabled",
-                        "-D man=false",
-                        "-D systemd=false"
-                    ],
-                    "sources": [
-                        {
-                            "type": "archive",
-                            "url": "https://github.com/PipeWire/pipewire/archive/0.2.7.tar.gz",
-                            "sha256": "bfaa0f6ae6c0791e2e0b59234d399753bf24f1b33dbf587682363a8463dd8df1"
-                        }
-                    ],
-                    "cleanup": [
-                        "/bin",
-                        "/etc",
-                        "/include",
-                        "/lib/gstreamer-1.0",
-                        "/lib/pipewire-0.2/libpipewire-module-audio-dsp.so",
-                        "/lib/pipewire-0.2/libpipewire-module-autolink.so",
-                        "/lib/pipewire-0.2/libpipewire-module-link-factory.so",
-                        "/lib/pipewire-0.2/libpipewire-module-mixer.so",
-                        "/lib/pipewire-0.2/libpipewire-module-portal.so",
-                        "/lib/pipewire-0.2/libpipewire-module-rtkit.so",
-                        "/lib/pipewire-0.2/libpipewire-module-spa-monitor.so",
-                        "/lib/pipewire-0.2/libpipewire-module-spa-node-factory.so",
-                        "/lib/pipewire-0.2/libpipewire-module-spa-node.so",
-                        "/lib/pipewire-0.2/libpipewire-module-suspend-on-idle.so",
-                        "/lib/spa/alsa",
-                        "/lib/spa/audiomixer",
-                        "/lib/spa/audiotestsrc",
-                        "/lib/spa/ffmpeg",
-                        "/lib/spa/test",
-                        "/lib/spa/v4l2",
-                        "/lib/spa/videotestsrc",
-                        "/lib/spa/volume"
-                    ]
-                }
-
-            ],
-            "sources": [
-                {
-                    "type": "git",
-                    "url": "https://invent.kde.org/qt/qt/qtwebengine.git",
-                    "tag": "v5.15.5-lts",
-                    "commit": "9711f64c5082040cb76f6da5ef4a16037dbda08f",
-                    "x-checker-data": {
-                        "type": "json",
-                        "url": "https://invent.kde.org/api/v4/projects/qt%2Fqt%2Fqtwebengine/repository/tags",
-                        "tag-query": "first(.[].name | match( \"v5.15[\\\\d.]+-lts|v5.15[\\\\d.]+\" ) | .string)",
-                        "version-query": "$tag",
-                        "timestamp-query": ".[] | select(.name==$tag) | .commit.created_at"
-                    }
-                },
-                {
-                    "type": "patch",
-                    "path": "patches/locales.patch"
-                },
-                {
-                    "type": "patch",
-                    "path": "patches/resources.patch"
-                }
-            ]
-        },
-        {
-            "name": "qt5-qtwebview",
-            "buildsystem": "qmake",
-            "sources": [
-                {
-                    "type": "git",
-                    "url": "https://invent.kde.org/qt/qt/qtwebview.git",
-                    "commit": "920de5f"
-                }
-            ],
-            "make-install-args": [
-                "INSTALL_ROOT=/app/scratchdir"
-            ],
-            "post-install": [
-                "cp -r /app/scratchdir/usr/* /app",
-                "rm -rf /app/scratchdir",
-                "ln -sf /app/lib/*/*.so* /app/lib"
-            ]
-        },
-        {
             "name": "enroute",
             "buildsystem": "cmake-ninja",
             "config-opts": [
-                "-DCMAKE_BUILD_TYPE=RelWithDebInfo",
-                "-DQt5WebView_DIR=/app/lib/x86_64-linux-gnu/cmake/Qt5WebView"
-            ],
+		"-DCMAKE_BUILD_TYPE=RelWithDebInfo"
+	    ],
             "sources": [
                 {
-                    "type": "git",
+		    "type": "git",
                     "url": "https://github.com/Akaflieg-Freiburg/enroute.git",
-                    "commit": "ab1a548"
+		    "commit": "4d059fb5"
                 }
             ],
-            "post-install": [
-                "mkdir -p /app/usr/share/icons",
-                "cp /app/share/icons/hicolor/scalable/apps/de.akaflieg_freiburg.enroute.svg /app/usr/share/icons/de.akaflieg_freiburg.enroute.svg"
-            ]
+	    "post-install": [
+		"mkdir -p /app/usr/share/icons",
+		"cp /app/share/icons/hicolor/scalable/apps/de.akaflieg_freiburg.enroute.svg /app/usr/share/icons/de.akaflieg_freiburg.enroute.svg"
+	    ]
         }
-
-        
     ]
 }
