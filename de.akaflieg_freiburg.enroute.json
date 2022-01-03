@@ -5,13 +5,13 @@
     "sdk": "org.kde.Sdk",
     "command": "enroute",
     "finish-args": [
-        "--share=ipc",
-        "--share=network",
-        "--socket=x11",
-        "--socket=fallback-x11",
-        "--socket=wayland",
         "--device=dri",
         "--device=shm",
+	"--share=ipc",
+        "--share=network",
+        "--socket=fallback-x11",
+        "--socket=wayland",
+        "--socket=x11",
         "--system-talk-name=org.freedesktop.GeoClue2",
         "--talk-name=org.freedesktop.Notifications"
     ],
@@ -26,7 +26,7 @@
                 {
 		    "type": "git",
                     "url": "https://github.com/Akaflieg-Freiburg/enroute.git",
-		    "commit": "4d059fb5"
+		    "commit": "39324ecf"
                 }
             ],
 	    "post-install": [
