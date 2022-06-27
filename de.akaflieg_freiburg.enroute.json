@@ -1,4 +1,4 @@
-{ 
+{
     "app-id": "de.akaflieg_freiburg.enroute",
     "runtime": "org.kde.Platform",
     "runtime-version": "5.15-21.08",
@@ -26,7 +26,7 @@
                 {
 		    "type": "git",
                     "url": "https://github.com/Akaflieg-Freiburg/enroute.git",
-		    "commit": "227fa403"
+		    "commit": "fdbf0a72"
                 }
             ],
 	    "post-install": [
