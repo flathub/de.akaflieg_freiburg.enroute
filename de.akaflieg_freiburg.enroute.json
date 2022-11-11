@@ -13,6 +13,7 @@
         "--socket=fallback-x11",
         "--socket=wayland",
         "--system-talk-name=org.freedesktop.GeoClue2",
+        "--system-talk-name=org.freedesktop.NetworkManager",
         "--talk-name=org.freedesktop.Notifications"
     ],
     "modules": [
@@ -26,7 +27,7 @@
                 {
 		    "type": "git",
                     "url": "https://github.com/Akaflieg-Freiburg/enroute.git",
-		    "commit": "16ef91d8"
+		    "commit": "4b46dfb7"
                 }
             ],
 	    "post-install": [
