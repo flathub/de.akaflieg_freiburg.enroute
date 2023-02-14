@@ -141,7 +141,8 @@
                 {
                     "type": "git",
                     "url": "https://github.com/Akaflieg-Freiburg/qtlocation.git",
-                    "commit": "67ddc41"
+                    "commit": "67ddc41",
+                    "disable-fsckobjects": true
                 }
             ],
             "buildsystem": "cmake-ninja"
