@@ -140,9 +140,8 @@
             "sources": [
                 {
                     "type": "git",
-                    "url": "https://github.com/Akaflieg-Freiburg/qtlocation.git",
-                    "commit": "67ddc41",
-                    "disable-fsckobjects": true
+                    "url": "https://github.com/Akaflieg-Freiburg/qtlocationstatic.git",
+                    "commit": "7533d6c"
                 }
             ],
             "buildsystem": "cmake-ninja"
@@ -170,6 +169,17 @@
             "buildsystem": "cmake-ninja"
         },
         {
+            "name": "qthttpserver",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://github.com/qt/qthttpserver.git",
+                    "tag": "v6.4.2"
+                }
+            ],
+            "buildsystem": "cmake-ninja"
+        },
+        {
             "name": "enroute",
             "buildsystem": "cmake-ninja",
             "config-opts": [
@@ -179,7 +189,7 @@
                 {
 		    "type": "git",
                     "url": "https://github.com/Akaflieg-Freiburg/enroute.git",
-		    "commit": "80c8a2b2"
+		    "commit": "a848c738"
                 }
             ],
 	    "post-install": [
