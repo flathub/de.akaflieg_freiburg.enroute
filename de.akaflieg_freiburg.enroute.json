@@ -189,7 +189,7 @@
                 {
 		    "type": "git",
                     "url": "https://github.com/Akaflieg-Freiburg/enroute.git",
-		    "commit": "5fe6ed92"
+		    "commit": "553b0bca"
                 }
             ],
 	    "post-install": [
