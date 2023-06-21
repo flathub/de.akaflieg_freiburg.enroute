@@ -10,6 +10,7 @@
     	"--filesystem=host",
     	"--share=ipc",
         "--share=network",
+        "--socket=pulseaudio",
         "--socket=wayland",
         "--socket=x11",
         "--system-talk-name=org.freedesktop.GeoClue2",
@@ -114,6 +115,52 @@
                 "-DFEATURE_qml_debug=OFF"
            ]
         },
+    	{
+            "name": "qtmultimedia",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://github.com/qt/qtmultimedia.git",
+                    "tag": "v6.4.3"
+                }
+            ],
+            "buildsystem": "cmake-ninja",
+            "config-opts": [
+                "-DCMAKE_FIND_ROOT_PATH:PATH=/app",
+                "-DCMAKE_BUILD_TYPE:STRING=Release"
+            ]
+        },
+    	{
+            "name": "flite",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://github.com/festvox/flite.git",
+                    "tag": "v2.2"
+                }
+            ],
+            "buildsystem": "simple",
+            "build-commands": [
+                "./configure --prefix=/app --with-pic",
+                "make",
+                "make install"
+            ]
+        },
+    	{
+            "name": "qtspeech",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://github.com/qt/qtspeech.git",
+                    "tag": "v6.4.3"
+                }
+            ],
+            "buildsystem": "cmake-ninja",
+            "config-opts": [
+                "-DCMAKE_FIND_ROOT_PATH:PATH=/app",
+                "-DCMAKE_BUILD_TYPE:STRING=Release"
+            ]
+        },
         {
             "name": "qt5compat",
             "sources": [
@@ -190,7 +237,7 @@
                 {
 		    "type": "git",
                     "url": "https://github.com/Akaflieg-Freiburg/enroute.git",
-		    "commit": "1592758e"
+		    "commit": "4cbb3828"
                 }
             ],
 	    "post-install": [
