@@ -141,8 +141,10 @@
             ],
             "buildsystem": "simple",
             "build-commands": [
-                "./configure --prefix=/app --with-pic",
+                "./configure --prefix=/app --with-langvox=ben --with-pic",
                 "make",
+		"make get_voices",
+		"echo >bin/flite_time",
                 "make install"
             ]
         },
@@ -237,7 +239,7 @@
                 {
 		    "type": "git",
                     "url": "https://github.com/Akaflieg-Freiburg/enroute.git",
-		    "commit": "4cbb3828"
+		    "commit": "1c2a452f"
                 }
             ],
 	    "post-install": [
