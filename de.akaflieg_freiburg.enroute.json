@@ -202,7 +202,7 @@
                 {
                     "type": "git",
                     "url": "https://github.com/maplibre/maplibre-native-qt",
-                    "commit": "80fe60e"
+                    "commit": "cbc7cbe"
                 }
             ],
             "buildsystem": "cmake-ninja",
