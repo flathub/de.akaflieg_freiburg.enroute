@@ -1,17 +1,15 @@
 {
     "app-id": "de.akaflieg_freiburg.enroute",
     "runtime": "org.freedesktop.Platform",
-    "runtime-version": "22.08",
+    "runtime-version": "23.08",
     "sdk": "org.freedesktop.Sdk",
     "command": "enroute",
     "finish-args": [
         "--device=dri",
-        "--device=shm",
     	"--filesystem=host",
     	"--share=ipc",
         "--share=network",
         "--socket=pulseaudio",
-        "--socket=wayland",
         "--socket=x11",
         "--system-talk-name=org.freedesktop.GeoClue2",
         "--system-talk-name=org.freedesktop.NetworkManager",
@@ -25,7 +23,7 @@
                 {
                     "type": "git",
                     "url": "https://github.com/qt/qtbase.git",
-                    "tag": "v6.7.1"
+                    "tag": "v6.7.2"
                 }
             ],
             "buildsystem": "cmake-ninja",
@@ -41,7 +39,7 @@
                 {
                     "type": "git",
                     "url": "https://github.com/qt/qtsvg.git",
-                    "tag": "v6.7.1"
+                    "tag": "v6.7.2"
                 }
             ],
             "buildsystem": "cmake-ninja",
@@ -56,7 +54,7 @@
                 {
                     "type": "git",
                     "url": "https://github.com/qt/qttools.git",
-                    "tag": "v6.7.1"
+                    "tag": "v6.7.2"
                 }
             ],
             "buildsystem": "cmake-ninja",
@@ -88,7 +86,7 @@
                 {
                     "type": "git",
                     "url": "https://github.com/qt/qtshadertools.git",
-                    "tag": "v6.7.1"
+                    "tag": "v6.7.2"
                 }
             ],
             "buildsystem": "cmake-ninja",
@@ -103,7 +101,7 @@
                 {
                     "type": "git",
                     "url": "https://github.com/qt/qtdeclarative.git",
-                    "tag": "v6.7.1"
+                    "tag": "v6.7.2"
                 }
             ],
             "buildsystem": "cmake-ninja",
@@ -121,7 +119,7 @@
                 {
                     "type": "git",
                     "url": "https://github.com/qt/qtmultimedia.git",
-                    "tag": "v6.7.1"
+                    "tag": "v6.7.2"
                 }
             ],
             "buildsystem": "cmake-ninja",
@@ -154,7 +152,7 @@
                 {
                     "type": "git",
                     "url": "https://github.com/qt/qtspeech.git",
-                    "tag": "v6.7.1"
+                    "tag": "v6.7.2"
                 }
             ],
             "buildsystem": "cmake-ninja",
@@ -169,7 +167,7 @@
                 {
                     "type": "git",
                     "url": "https://github.com/qt/qt5compat.git",
-                    "tag": "v6.7.1"
+                    "tag": "v6.7.2"
                 }
             ],
             "buildsystem": "cmake-ninja"
@@ -180,7 +178,7 @@
                 {
                     "type": "git",
                     "url": "https://github.com/qt/qtpositioning.git",
-                    "tag": "v6.7.1"
+                    "tag": "v6.7.2"
                 }
             ],
             "buildsystem": "cmake-ninja"
@@ -191,7 +189,7 @@
                 {
                     "type": "git",
                     "url": "https://github.com/qt/qtlocation.git",
-                    "tag": "v6.7.1"
+                    "tag": "v6.7.2"
                 }
             ],
             "buildsystem": "cmake-ninja"
@@ -218,7 +216,7 @@
                 {
                     "type": "git",
                     "url": "https://github.com/qt/qttranslations.git",
-                    "tag": "v6.7.1"
+                    "tag": "v6.7.2"
                 }
             ],
             "buildsystem": "cmake-ninja"
@@ -229,7 +227,7 @@
                 {
                     "type": "git",
                     "url": "https://github.com/qt/qtconnectivity.git",
-                    "tag": "v6.7.1"
+                    "tag": "v6.7.2"
                 }
             ],
             "buildsystem": "cmake-ninja"
@@ -240,7 +238,7 @@
                 {
                     "type": "git",
                     "url": "https://github.com/qt/qtserialport.git",
-                    "tag": "v6.7.1"
+                    "tag": "v6.7.2"
                 }
             ],
             "buildsystem": "cmake-ninja"
@@ -251,7 +249,7 @@
                 {
                     "type": "git",
                     "url": "https://github.com/qt/qtimageformats.git",
-                    "tag": "v6.7.1"
+                    "tag": "v6.7.2"
                 }
             ],
             "buildsystem": "cmake-ninja"
@@ -262,7 +260,7 @@
                 {
                     "type": "git",
                     "url": "https://github.com/qt/qthttpserver.git",
-                    "tag": "v6.7.1"
+                    "tag": "v6.7.2"
                 }
             ],
             "buildsystem": "cmake-ninja"
@@ -288,7 +286,7 @@
                 {
 		    "type": "git",
                     "url": "https://github.com/Akaflieg-Freiburg/enroute.git",
-		    "commit": "8e08a036"
+		    "commit": "6b8b4719f"
                 }
             ],
 	    "post-install": [
