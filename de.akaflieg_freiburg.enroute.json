@@ -34,7 +34,6 @@
       "build-commands": [
         "./configure --prefix=/app --with-langvox=ben --with-pic",
         "make",
-        "make get_voices",
         "echo >bin/flite_time",
         "make install"
       ]
