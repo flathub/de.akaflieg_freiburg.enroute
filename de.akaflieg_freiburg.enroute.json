@@ -46,6 +46,7 @@
           "url": "https://github.com/maplibre/maplibre-native-qt.git",
           "commit": "91d033f"
         }
+      ],
       "buildsystem": "cmake-ninja",
       "config-opts": [
         "-DCMAKE_CXX_FLAGS=-Wno-error",
