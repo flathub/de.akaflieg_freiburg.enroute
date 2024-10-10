@@ -42,11 +42,10 @@
       "name": "maplibre-native-qt",
       "sources": [
         {
-          "type": "archive",
-          "url": "https://github.com/Akaflieg-Freiburg/enrouteDependencies/releases/download/developerBuilds/maplibre-native-qt.tar.xz",
-          "sha256": "57cb9eaf8939cbd9b5b7e5891ddede70eddc0f6d56d15ad5050953469b7c28cc"
+          "type": "git",
+          "url": "https://github.com/maplibre/maplibre-native-qt.git",
+          "commit": "91d033f"
         }
-      ],
       "buildsystem": "cmake-ninja",
       "config-opts": [
         "-DCMAKE_CXX_FLAGS=-Wno-error",
@@ -93,7 +92,7 @@
         {
           "type": "git",
           "url": "https://github.com/Akaflieg-Freiburg/enroute.git",
-          "commit": "3de932d5c"
+          "commit": "2467bd7f"
         }
       ],
       "post-install": [
