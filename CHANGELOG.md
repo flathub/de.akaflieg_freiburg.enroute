@@ -1,9 +1,19 @@
 # Changelog
 
+## [2.32.0] - 2024-11-11
+
+### Added
+- Enroute can now calculate density altitudes from METAR data (#408)
+
+
+### Fixed
+- Icons for reporting points no longer rotate along with the moving map (#453)
+
+
 ## [2.31.16] - 2024-11-4
 
 ### Added
-- Enroute can now import PLN and FPL file as flight routes (#443, #342)
+- Enroute can now import PLN and FPL files as flight routes (#443, #342)
 
 
 ## [2.31.15] - 2024-10-27
