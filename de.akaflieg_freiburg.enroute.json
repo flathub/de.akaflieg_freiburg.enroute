@@ -44,7 +44,7 @@
         {
           "type": "archive",
           "url": "https://github.com/Akaflieg-Freiburg/enrouteDependencies/releases/download/developerBuilds/maplibre-native-qt.tar.xz",
-          "sha256": "b2527d9e34262e9e6aee2c8edcaee90b2489c34b610fef760b739af1759c9d3b"
+          "sha256": "59832093b7f77e6f836f9e4ee1ee2f7cc6028de0f02e78a6ac98d7932f6920ca"
         }
       ],
       "buildsystem": "cmake-ninja",
@@ -71,7 +71,7 @@
         {
           "type": "git",
           "url": "https://github.com/qt/qthttpserver.git",
-          "tag": "v6.8.1"
+          "tag": "v6.8.2"
         }
       ],
       "buildsystem": "cmake-ninja"
@@ -93,7 +93,7 @@
         {
           "type": "git",
           "url": "https://github.com/Akaflieg-Freiburg/enroute.git",
-          "commit": "eb4bf0ce0"
+          "commit": "320e02fa8"
         }
       ],
       "post-install": [
