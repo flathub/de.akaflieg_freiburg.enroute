@@ -71,7 +71,7 @@
         {
           "type": "git",
           "url": "https://github.com/qt/qthttpserver.git",
-          "tag": "v6.8.3"
+          "tag": "v6.8.2"
         }
       ],
       "buildsystem": "cmake-ninja"
@@ -93,7 +93,7 @@
         {
           "type": "git",
           "url": "https://github.com/Akaflieg-Freiburg/enroute.git",
-          "commit": "4bb353dde"
+          "commit": "3e4ce5464"
         }
       ],
       "post-install": [
