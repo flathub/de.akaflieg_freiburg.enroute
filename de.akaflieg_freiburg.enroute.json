@@ -1,10 +1,10 @@
 {
   "app-id": "de.akaflieg_freiburg.enroute",
   "runtime": "org.kde.Platform",
-  "runtime-version": "6.8",
+  "runtime-version": "6.9",
   "sdk": "org.kde.Sdk",
   "base": "io.qt.qtwebengine.BaseApp",
-  "base-version": "6.8",
+  "base-version": "6.9",
   "command": "enroute",
   "finish-args": [
     "--device=dri",
@@ -71,7 +71,7 @@
         {
           "type": "git",
           "url": "https://github.com/qt/qthttpserver.git",
-          "tag": "v6.8.3"
+          "tag": "v6.9.1"
         }
       ],
       "buildsystem": "cmake-ninja"
@@ -93,7 +93,7 @@
         {
           "type": "git",
           "url": "https://github.com/Akaflieg-Freiburg/enroute.git",
-          "commit": "2f8d37288"
+          "commit": "627d8018a"
         }
       ],
       "post-install": [
