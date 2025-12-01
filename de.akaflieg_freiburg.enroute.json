@@ -7,7 +7,7 @@
   "base-version": "6.9",
   "command": "enroute",
   "finish-args": [
-    "--device=dri",
+    "--device=all",
     "--env=QML_IMPORT_PATH=/app/qml",
     "--env=QT_PLUGIN_PATH=/app/plugins",
     "--filesystem=host",
@@ -93,7 +93,7 @@
         {
           "type": "git",
           "url": "https://github.com/Akaflieg-Freiburg/enroute.git",
-          "commit": "1acbce3cd"
+          "commit": "751e0b447"
         }
       ],
       "post-install": [
